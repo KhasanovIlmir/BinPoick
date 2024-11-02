@@ -7,22 +7,20 @@ import (
 )
 
 func main() {
-	// Seed the random number generator
 	rand.Seed(time.Now().UnixNano())
 
-	// Generate a slice of random integers
 	a := make([]int, 10)
 	for i := 0; i < 10; i++ {
 		a[i] = rand.Intn(50) + 1 // randint(1, 50) in Python
 	}
 	fmt.Println(a)
 
-	// Read input value from the user
+	
 	var value int
 	fmt.Print("Enter a value to search: ")
 	fmt.Scan(&value)
 
-	// Binary search implementation
+	
 	low := 0
 	high := len(a) - 1
 	var mid int
@@ -39,6 +37,6 @@ func main() {
 		}
 	}
 
-	// If the value is not found
+	
 	fmt.Println("No value")
 }
